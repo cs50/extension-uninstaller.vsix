@@ -1,5 +1,5 @@
 {
-  "name": "extension-uninstaller",
+	"name": "extension-uninstaller",
 	"displayName": "Extension Uninstaller",
 	"description": "",
     "publisher": "CS50",
@@ -15,7 +15,19 @@
         "onStartupFinished"
 	],
 	"main": "./out/extension.js",
-	"contributes": {},
+	"contributes": {
+		"configuration":[
+			{
+				"title": "Uninstall Extensions",
+				"properties": {
+					"extension-uninstaller.uninstall": {
+						"type": "array",
+						"description": "Extensions to be uninstalled."
+					}
+				}
+			}
+		]
+	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",

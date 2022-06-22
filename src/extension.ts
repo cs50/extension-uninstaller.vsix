@@ -1,19 +1,22 @@
 import * as vscode from 'vscode';
 
-function uninstallExtension() {
-    const denyList = ['github.copilot', 'github.copilot-nightly', 'TabNine.tabnine-vscode'];
+function uninstallExtension(context: vscode.ExtensionContext) {
+    const extName = context.extension.packageJSON['name'];
     try {
-        for (let i = 0; i < denyList.length; i++) {
-            vscode.commands.executeCommand("workbench.extensions.uninstallExtension", denyList[i]);
-        }
-    } catch (error) {
-        console.log(error);
+        vscode.workspace.getConfiguration(extName)['uninstall'].map((each: string) => {
+            if (vscode.extensions.getExtension(each) !== undefined) {
+                vscode.commands.executeCommand("workbench.extensions.uninstallExtension", each);
+            }
+        });
+    } catch (e) {
+        console.error(e);
     }
 }
 
 export function activate(context: vscode.ExtensionContext) {
-    uninstallExtension();
-	vscode.extensions.onDidChange(() => {uninstallExtension();});
+    uninstallExtension(context);
+	vscode.extensions.onDidChange(() => {uninstallExtension(context);});
+    vscode.workspace.onDidChangeConfiguration(() => {uninstallExtension(context);});
 }
 
 export function deactivate() {}
