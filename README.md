@@ -1,1 +1,1 @@
-# extension-uninstaller
+# Extension Uninstaller
