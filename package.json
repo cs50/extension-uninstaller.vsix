@@ -1,15 +1,15 @@
 {
 	"name": "extension-uninstaller",
 	"displayName": "Extension Uninstaller",
-	"description": "",
+	"description": "Uninstall extensions by their identifiers.",
 	"publisher": "CS50",
 	"repository": "https://github.com/cs50/extension-uninstaller.vsix",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.68.0"
 	},
 	"categories": [
-		"Other"
+		"Education"
 	],
 	"activationEvents": [
 		"onStartupFinished"
