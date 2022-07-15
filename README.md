@@ -1,6 +1,6 @@
 # Extension Uninstaller
 
-Uninstall extensions by their extension identifiers in `settings.json`:
+Uninstall extensions by their extension identifiers defined in `settings.json`:
 
 ```
 {
