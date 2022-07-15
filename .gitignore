@@ -1,4 +1,10 @@
-node_modules/
+.*
+!/.github/
+!/.eslintrc.js
+!/.vscodeignore
+!.gitignore
+
 *.vsix
-*.DS_Store
-out/
+.vscode/
+out
+node_modules/

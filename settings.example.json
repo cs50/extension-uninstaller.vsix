@@ -1,0 +1,7 @@
+{
+    "extension-uninstaller.uninstall": [
+        "github.copilot",
+        "github.copilot-nightly",
+        "tabnine.tabnine-vscode"
+    ]
+}
