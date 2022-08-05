@@ -11,12 +11,17 @@ function uninstallExtension(context: vscode.ExtensionContext) {
     const extName = context.extension.packageJSON['name'];
     try {
 
+        // Skip uninstalling extensions specified in the configuration
+        const skip: Array<string>= vscode.workspace.getConfiguration(extName)['skip'];
+
         // Get the configuration for this extension
         vscode.workspace.getConfiguration(extName)['uninstall'].map((each: string) => {
 
             // Remove matching extension
             if (vscode.extensions.getExtension(each) !== undefined) {
-                vscode.commands.executeCommand('workbench.extensions.uninstallExtension', each);
+                if (!skip.includes(each)) {
+                    vscode.commands.executeCommand('workbench.extensions.uninstallExtension', each);
+                }
             }
         });
     } catch (e) {
