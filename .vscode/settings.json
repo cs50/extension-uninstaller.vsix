@@ -8,9 +8,8 @@
     },
     // Turn off tsc task auto detection since we have the necessary tasks as npm scripts
     "typescript.tsc.autoDetect": "off",
-    "presentation-mode.configBackup": {},
     "extension-uninstaller.uninstall": [
-        "ms-toolsai.jupyter"
+        "cs50.copilot50"
     ],
     "extension-uninstaller.skip": [
         // "ms-toolsai.jupyter"
