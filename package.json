@@ -5,7 +5,7 @@
     "icon": "images/extension_uninstaller.png",
     "publisher": "CS50",
     "repository": "https://github.com/cs50/extension-uninstaller.vsix",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "engines": {
         "vscode": "^1.68.0"
     },
@@ -54,13 +54,13 @@
         "@typescript-eslint/eslint-plugin": "^5.27.0",
         "@typescript-eslint/parser": "^5.27.0",
         "@vscode/test-electron": "^2.1.3",
+        "@vscode/vsce": "^2.19.0",
         "eslint": "^8.16.0",
         "glob": "^8.0.3",
         "mocha": "^10.0.0",
         "typescript": "^4.7.2"
     },
     "dependencies": {
-        "-": "^0.0.1",
-        "@vscode/vsce": "^2.9.3"
+        "-": "^0.0.1"
     }
 }
