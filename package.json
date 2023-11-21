@@ -5,7 +5,7 @@
     "icon": "images/extension_uninstaller.png",
     "publisher": "CS50",
     "repository": "https://github.com/cs50/extension-uninstaller.vsix",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "engines": {
         "vscode": "^1.83.1"
     },
@@ -23,7 +23,10 @@
                 "properties": {
                     "extension-uninstaller.uninstall": {
                         "type": "array",
-                        "description": "Extensions to be uninstalled."
+                        "items" : {
+                            "type": "string"
+                        },
+                        "description": "Extensions to be uninstalled. Each item should be a valid extension identifier."
                     }
                 }
             },
@@ -32,7 +35,10 @@
                 "properties": {
                     "extension-uninstaller.skip": {
                         "type": "array",
-                        "description": "Do not uninstall extensions specified under this setting."
+                        "items" : {
+                            "type": "string"
+                        },
+                        "description": "Do not uninstall extensions specified under this setting. Each item should be a valid extension identifier."
                     }
                 }
             }
