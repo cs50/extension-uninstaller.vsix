@@ -7,7 +7,7 @@
     "repository": "https://github.com/cs50/extension-uninstaller.vsix",
     "version": "1.0.10",
     "engines": {
-        "vscode": "^1.107.0"
+        "vscode": "^1.134.0"
     },
     "categories": [
         "Education"
@@ -54,18 +54,20 @@
     },
     "devDependencies": {
         "@types/mocha": "^10.0.10",
-        "@types/node": "25.0.3",
-        "@types/vscode": "^1.107.0",
-        "@typescript-eslint/eslint-plugin": "^8.51.0",
-        "@typescript-eslint/parser": "^8.51.0",
-        "@vscode/test-electron": "^2.5.2",
-        "@vscode/vsce": "^3.7.1",
-        "eslint": "^9.39.2",
-        "glob": "^13.0.0",
-        "mocha": "^11.7.5",
+        "@types/node": "26.2.0",
+        "@types/vscode": "^1.134.0",
+        "@typescript-eslint/eslint-plugin": "^8.67.0",
+        "@typescript-eslint/parser": "^8.67.0",
+        "@vscode/test-electron": "^3.1.0",
+        "@vscode/vsce": "^3.9.2",
+        "eslint": "^10.9.0",
+        "glob": "^13.0.6",
+        "mocha": "^11.8.0",
         "typescript": "^5.9.3"
     },
-    "dependencies": {
-        "-": "^0.0.1"
+    "dependencies": {},
+    "overrides": {
+        "serialize-javascript": "^7.1.0",
+        "diff": "^8.0.3"
     }
 }
